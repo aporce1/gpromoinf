@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.gpromo.gpromoapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>GPromo</name>
+<widget id="br.com.gpromo.gpromoapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>GuiaPromo</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        As melhores promoções na palma da sua mão
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="contato@gpromo.com.br" href="http://gpromo.com.br">
+        SysSol ADA2 Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
