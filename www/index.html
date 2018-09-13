@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com  https://dev-ipromo.pantheonsite.io https://maps.googleapis.com http://maps.googleapis.com https://maps.gstatic.com http://maps.gstatic.com https://fonts.googleapis.com http://fonts.googleapis.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- Path to your custom app styles-->
+    <script src="js/jquery-1.8.0.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuw9OqJsr47Pypg4gKkEOxY-Pl8eNkdIw" type="text/javascript"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/geolocating.js"></script>
+    <script src="js/myapp.js"></script>
+    <title>Guia Promo</title>
+</head>
+<body>
+ <!--   <div data-role="page">-->
+        <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+            <div data-role="header" class="header">
+                <h1 id="app-title">Guia Promo</h1>
+                <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+                <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+            </div>
+
+            <div data-role="tabs" id="tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#one" data-ajax="false" id="empresas">Empresas</a></li>
+                        <li><a href="#two" data-ajax="false" id="mapa">Mapa</a></li>
+                        <li><a href="#tree" data-ajax="false">Productos</a></li>
+                    </ul>
+                </div>
+                <div id="one" class="ui-body-d ui-content">
+                    <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+                        <div data-role="collapsible">
+                            <h3 id='Acougue'>Açougue<span class="cAcougue"></span></h3>
+                            <p id='pAcougue'>I'm the collapsible content for section 1</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Bar'>Bar<span class="cBar"></span></h3>
+                            <p id='pBar'>I'm the collapsible content for section 2</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='PostodeCombustivel'>Posto de Combustivel<span class="cPostodeCombustivel"></span></h3>
+                            <p id='pPostodeCombustivel'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Mercado'>Mercado<span class="cMercado"></span></h3>
+                            <p id='pMercado'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Salao'>Salão<span class="cSalao"></span></h3>
+                            <p id='pSalao'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Farmacias'>Farmacias<span class="cFarmacias"></span></h3>
+                            <p id='pFarmacias'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Retaurantes'>Retaurantes<span class="cRetaurantes"></span></h3>
+                            <p id='pRetaurantes'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Lanches'>Lanches<span class="cLanches"></span></h3>
+                            <p id='pLanches'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Pizzarias'>Pizzarias<span class="cPizzarias"></span></h3>
+                            <p id='pPizzarias'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Academias'>Academias<span class="cAcademias"></span></h3>
+                            <p id='pAcademias'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='CorrectoresInmovel'>Correctores Inmovel<span class="cCorrectoresInmovel"></span></h3>
+                            <p id='pCorrectoresInmovel'></p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Papelarias'>Papelarias<span class="cPapelarias"></span></h3>
+                            <p id='pPapelarias'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Supermercados'>Supermercados<span class="cSupermercados"></span></h3>
+                            <p id='pSupermercados'>I'm the collapsible content for section 3</p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 id='Cafeterias'>Cafeterias<span class="cCafeterias"></span></h3>
+                            <p id='pCafeterias'>I'm the collapsible content for section 3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="two">
+                    <ul data-role="listview" data-inset="true">
+                        <div id="map"></div>
+                    </ul>
+                </div>
+                <div id="tree">
+                    <ul data-role="listview" data-inset="true">
+                        <div id="searchproductos">Search productos under construction</div>
+                    </ul>
+                </div>
+            </div>
+
+
+            <footer data-role="footer" data-position="fixed">
+                <h4 style="text-align:center">SysSol ADA2 GuiaPromo &copy; 2018</h4>
+            </footer>
+            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                    <li><a href="#panel-responsive-page2">Accordion</a></li>
+                    <li><a href="#panel-responsive-page2">AJAX Navigation</a></li>
+                    <li><a href="#panel-responsive-page2">Autocomplete</a></li>
+                    <li><a href="#panel-responsive-page2">Buttons</a></li>
+                    <li><a href="#panel-responsive-page2">Checkboxes</a></li>
+                    <li><a href="#panel-responsive-page2">Collapsibles</a></li>
+                    <li><a href="#panel-responsive-page2">Controlgroup</a></li>
+                    <li><a href="#panel-responsive-page2">Dialogs</a></li>
+                    <li><a href="#panel-responsive-page2">Fixed toolbars</a></li>
+                    <li><a href="#panel-responsive-page2">Flip switch toggle</a></li>
+                    <li><a href="#panel-responsive-page2">Footer toolbar</a></li>
+                    <li><a href="#panel-responsive-page2">Form elements</a></li>
+                    <li><a href="#panel-responsive-page2">Grids</a></li>
+                    <li><a href="#panel-responsive-page2">Header toolbar</a></li>
+                    <li><a href="#panel-responsive-page2">Icons</a></li>
+                    <li><a href="#panel-responsive-page2">Links</a></li>
+                    <li><a href="#panel-responsive-page2">Listviews</a></li>
+                    <li><a href="#panel-responsive-page2">Loader overlay</a></li>
+                    <li><a href="#panel-responsive-page2">Navbar</a></li>
+                    <li><a href="#panel-responsive-page2">Navbar, persistent</a></li>
+                    <li><a href="#panel-responsive-page2">Pages</a></li>
+                    <li><a href="#panel-responsive-page2">New</a></li>
+                    <li><a href="#panel-responsive-page2">Popup</a></li>
+                    <li><a href="#panel-responsive-page2">Radio buttons</a></li>
+                    <li><a href="#panel-responsive-page2">Select</a></li>
+                    <li><a href="#panel-responsive-page2">Slider, single</a></li>
+                    <li><a href="#panel-responsive-page2">New</a></li>
+                    <li><a href="#panel-responsive-page2">New</a></li>
+                    <li><a href="#panel-responsive-page2">New</a></li>
+                    <li><a href="#panel-responsive-page2">Text inputs & textarea</a></li>
+                    <li><a href="#panel-responsive-page2">Transitions</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+    <!--</div>-->
+    <script type="text/javascript" src="js/cordova.js"></script>
+    <script type="text/javascript" src="js/platformOverrides.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
