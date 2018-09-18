@@ -1,5 +1,35 @@
-﻿.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
-
+﻿.ui-content.jqm-content.jqm-fullwidth {
+    padding: 0px;
+}
+input[type="submit"] {
+    background-color: rgba(5,132,20,0.9) !important;
+    opacity: 0.7;
+}
+.phcEmpresa {
+    background: rgba(240,47,23,1);
+    background: -moz-linear-gradient(top, rgba(240,47,23,1) 0%, rgba(255,255,255,1) 0%, rgba(241,111,92,0.87) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(240,47,23,1)), color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(241,111,92,0.87)));
+    background: -webkit-linear-gradient(top, rgba(240,47,23,1) 0%, rgba(255,255,255,1) 0%, rgba(241,111,92,0.87) 100%);
+    background: -o-linear-gradient(top, rgba(240,47,23,1) 0%, rgba(255,255,255,1) 0%, rgba(241,111,92,0.87) 100%);
+    background: -ms-linear-gradient(top, rgba(240,47,23,1) 0%, rgba(255,255,255,1) 0%, rgba(241,111,92,0.87) 100%);
+    background: linear-gradient(to bottom, rgba(240,47,23,1) 0%, rgba(255,255,255,1) 0%, rgba(241,111,92,0.87) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#f16f5c', GradientType=0 );
+}
+.collapse > h3 {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.ui-header.ui-bar-inherit, .jqm-footer.ui-footer.ui-bar-inherit.ui-footer-fixed.slideup {
+    background-color: rgba(183,11,11,0.5);
+}
+a.ui-link.ui-btn-right.ui-btn.ui-icon-mail.ui-btn-icon-notext.ui-shadow.ui-corner-all {
+    background-color: rgba(4,96,38,0.5);
+}
+a.ui-link.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all {
+    background-color: rgba(0,0,0,0.5);
+}
+.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
     border: none !important;
 }
 div#map {
@@ -12,21 +42,19 @@ div#map {
         #promohojecontent .phcEmpresa .ui-block-a img {
             max-width: 50px;
         }
-        #promohojecontent .phcEmpresa > p {
-            float: left;
-            margin-left: 10px;
+        #promohojecontent .phcEmpresa .ui-block-b {
             font-weight: 700;
+            padding-top: 14px;
+            padding-left: 6px;
         }
 #promohojecontent .phcEmpresaPromo {
-    padding-left: 25px;
-    border-bottom: 1px solid #cdcdcd;
+    padding-left: 2px;
+    border-left: 3px solid #ff0000;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
     #promohojecontent .phcEmpresaPromo img {
-        max-width: 80px;
-        float: left;
-        margin-right: 10px;
+        max-width: 50px;
     }
     #promohojecontent .phcEmpresaPromo .titlepromo {
         font-size: 19px;
@@ -47,12 +75,11 @@ div#map {
         margin-top: 0px;
     }
     #promohojecontent .phcEmpresaPromo .coomentpromo {
-        /* width: 100%; */
         float: left;
         margin-top: 0px;
     }
 .data { font-size: 13px;}
 .divisordata {
     font-size: 13px;
-    padding: 0px 10px;
+    padding: 0px 5px;
 }

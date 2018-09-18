@@ -25,8 +25,8 @@
                 <li><a href="#panel-fixed-page2">Checkboxes</a></li>
             </ul>
         </div><!-- /panel -->
-        <div data-role="header">
-            <h1>Guia Promo</h1>
+        <div data-role="header" style="text-align:center">
+            <img src="img/logo2.png" style="max-width: 169px;padding-top: 3px;"/>
             <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
             <a href="#contacto" data-icon="mail" data-iconpos="notext">Add</a>
         </div><!-- /header -->
@@ -42,7 +42,7 @@
                 </div>
                 <div id="one">
                     <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
-                        <div data-role="collapsible">
+                        <div data-role="collapsible" class="collapse">
                             <h3 id='promohoje'>Promoções hoje<span class="cAcougue"></span></h3>
                             <div id='promohojecontent'>
                                 <div class="phcEmpresa">
@@ -50,20 +50,35 @@
                                     <div class="ui-block-b">Bar Los Compa</div>
                                 </div>
                                 <div class="phcEmpresaPromo">
-                                    <div class="ui-block-a" style="    width: 23%;">
-                                        <img src="img/pa.jpg" style="max-width:100px" />
+                                    <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th data-priority="1"></th>
+                                                <th data-priority="persist"></th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>
+                                                <a href="#pa1" data-rel="popup" data-position-to="window"><img src="img/pa.jpg" /></a>
+                                            </td>
+                                            <td>
+                                                <p class="titlepromo">Primos do Arrocha</p>
+                                                <div class="ui-block-a data">Data: 22/09/2018 21:30 horas</div>
+                                                <div class="ui-block-b divisordata">|</div>
+                                                <div class="ui-block-c data">Até: 22/09/2018</div>
+                                                <p class="coomentpromo">Com muita cerveja gelada e os bom tiragostos</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- Popups for lightbox images -->
+                                    <div id="pa1" data-role="popup" data-overlay-theme="a">
+                                        <img src="img/pa.jpg" style="max-width100%">
                                     </div>
-                                    <div class="ui-block-b" style="width: 75%;">
-                                        <p class="titlepromo">Primos do Arrocha</p>
-                                        <div class="ui-block-a data">Data: 22/09/2018 21:30 horas</div>
-                                        <div class="ui-block-b divisordata">|</div>
-                                        <div class="ui-block-c data">Até: 22/09/2018</div>
-                                            <p class="coomentpromo">Com muita cerveja gelada e os bom tiragostos</p>
-                                            </div>
-                                    </div>
+
                                 </div>
+                            </div>
                         </div>
-                        <div data-role="collapsible">
+                        <div data-role="collapsible" class="collapse">
                             <h3 id='promoactiva'>Promoções Ativas<span class="cAcougue"></span></h3>
                             <div id='promoactivacontent'>Não temos Promoções ativas no momento</div>
                         </div>
@@ -110,7 +125,7 @@
 
         </div><!-- /content -->
 
-        <div data-role="footer" theme="b">
+        <div data-role="footer" theme="b" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
             <h4>GuiaPromo &copy; 2018</h4>
         </div><!-- /footer -->
     </div><!-- /page -->
@@ -124,10 +139,10 @@
         </div><!-- /header -->
 
         <div role="main" class="ui-content" id="pagEmpresasContent">
-            
+
         </div><!-- /content -->
 
-        <div data-role="footer" theme="b">
+        <div data-role="footer" theme="b" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
             <h4>GuiaPromo &copy; 2018</h4>
         </div><!-- /footer -->
     </div><!-- /page -->
