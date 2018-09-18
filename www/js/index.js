@@ -1,31 +1,34 @@
-﻿// For an introduction to the Blank template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkID=397704
-// To debug code on page load in cordova-simulate or on Android devices/emulators: launch your app, set breakpoints, 
-// and then run "window.location.reload()" in the JavaScript Console.
-(function () {
-    "use strict";
+var app = {
+    
+    initialize: function() {
+        this.initFastClick();
+        this.bindEvents();
+    },
+    
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+    initFastClick : function() {
+        window.addEventListener('load', function() {
+            FastClick.attach(document.body);
+        }, false);
+    },
 
-    function onDeviceReady() {
-        // Handle the Cordova pause and resume events
-        //document.addEventListener( 'pause', onPause.bind( this ), false );
-        //document.addEventListener( 'resume', onResume.bind( this ), false );
-        // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
-        getGeoLocation();
-        
-        var parentElement = document.getElementById('deviceready');
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-    };
+    onDeviceReady: function () {
 
-    function onPause() {
-        // TODO: This application has been suspended. Save application state here.
-    };
+        //chequeo si tienen internet
+        if (checkConnection() == 'NoInternet') {
+            navigator.notification.alert(
+                'Sentimos mas o app so funciona com Acceso a Internet por enquanto',  // message
+                alertDismissed,         // callback
+                'Sem Internet',            // title
+                'Tchau'                  // buttonName
+            );
+        }
 
-    function onResume() {
-        // TODO: This application has been reactivated. Restore application state here.
-    };
-} )();
+        //Listo las categorias activas en el panel
+        GetCategories();
+
+    }
+};

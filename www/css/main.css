@@ -1,0 +1,58 @@
+﻿.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
+
+    border: none !important;
+}
+div#map {
+    height: 500px;
+}
+    #promohojecontent .phcEmpresa, #promohojecontent .phcEmpresaPromo {
+        float: left;
+        width: 100%;
+    }
+        #promohojecontent .phcEmpresa .ui-block-a img {
+            max-width: 50px;
+        }
+        #promohojecontent .phcEmpresa > p {
+            float: left;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+#promohojecontent .phcEmpresaPromo {
+    padding-left: 25px;
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+    #promohojecontent .phcEmpresaPromo img {
+        max-width: 80px;
+        float: left;
+        margin-right: 10px;
+    }
+    #promohojecontent .phcEmpresaPromo .titlepromo {
+        font-size: 19px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    #promohojecontent .phcEmpresaPromo .datainiciopromo {
+        font-size: 14px;
+        float: left;
+        width: 30%;
+        margin-top: 0px;
+    }
+    #promohojecontent .phcEmpresaPromo .datafinpromo {
+        float: right;
+        width: 30%;
+        font-size: 14px;
+        margin-top: 0px;
+    }
+    #promohojecontent .phcEmpresaPromo .coomentpromo {
+        /* width: 100%; */
+        float: left;
+        margin-top: 0px;
+    }
+.data { font-size: 13px;}
+.divisordata {
+    font-size: 13px;
+    padding: 0px 10px;
+}

@@ -1,161 +1,146 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <!--
-        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
-        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com  https://dev-ipromo.pantheonsite.io https://maps.googleapis.com http://maps.googleapis.com https://maps.gstatic.com http://maps.gstatic.com https://fonts.googleapis.com http://fonts.googleapis.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <meta name="theme-color" content="#2196f3">
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <!-- Path to your custom app styles-->
-    <script src="js/jquery-1.8.0.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com https://gpromo.com.br https://maps.googleapis.com https://maps.gstatic.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://gpromo.com.br https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com" "  />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>GuiaPromo</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuw9OqJsr47Pypg4gKkEOxY-Pl8eNkdIw" type="text/javascript"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/geolocating.js"></script>
-    <script src="js/myapp.js"></script>
-    <title>Guia Promo</title>
+    <link rel="stylesheet" href="libs/jQueryMobile/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
- <!--   <div data-role="page">-->
-        <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
-            <div data-role="header" class="header">
-                <h1 id="app-title">Guia Promo</h1>
-                <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-                <a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
-            </div>
 
+
+    <!-- Start of first page -->
+    <div data-role="page" id="inicio">
+        <div data-role="panel" data-position-fixed="true" data-display="push" id="nav-panel">
+            <ul data-role="listview">
+                <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                <li><a href="#panel-fixed-page2">Accordion</a></li>
+                <li><a href="#panel-fixed-page2">Ajax Navigation</a></li>
+                <li><a href="#panel-fixed-page2">Autocomplete</a></li>
+                <li><a href="#panel-fixed-page2">Buttons</a></li>
+                <li><a href="#panel-fixed-page2">Checkboxes</a></li>
+            </ul>
+        </div><!-- /panel -->
+        <div data-role="header">
+            <h1>Guia Promo</h1>
+            <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+            <a href="#contacto" data-icon="mail" data-iconpos="notext">Add</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content jqm-content jqm-fullwidth">
             <div data-role="tabs" id="tabs">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#one" data-ajax="false" id="empresas">Empresas</a></li>
+                        <li><a href="#one" data-ajax="false" id="empresas">Promoções</a></li>
                         <li><a href="#two" data-ajax="false" id="mapa">Mapa</a></li>
-                        <li><a href="#tree" data-ajax="false">Productos</a></li>
+                        <li><a href="#tree" data-ajax="false">Pesquisar</a></li>
                     </ul>
                 </div>
-                <div id="one" class="ui-body-d ui-content">
+                <div id="one">
                     <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
                         <div data-role="collapsible">
-                            <h3 id='Acougue'>Açougue<span class="cAcougue"></span></h3>
-                            <p id='pAcougue'>I'm the collapsible content for section 1</p>
+                            <h3 id='promohoje'>Promoções hoje<span class="cAcougue"></span></h3>
+                            <div id='promohojecontent'>
+                                <div class="phcEmpresa">
+                                    <div class="ui-block-a"><img src="img/loscompa.png"></div>
+                                    <div class="ui-block-b">Bar Los Compa</div>
+                                </div>
+                                <div class="phcEmpresaPromo">
+                                    <div class="ui-block-a" style="    width: 23%;">
+                                        <img src="img/pa.jpg" style="max-width:100px" />
+                                    </div>
+                                    <div class="ui-block-b" style="width: 75%;">
+                                        <p class="titlepromo">Primos do Arrocha</p>
+                                        <div class="ui-block-a data">Data: 22/09/2018 21:30 horas</div>
+                                        <div class="ui-block-b divisordata">|</div>
+                                        <div class="ui-block-c data">Até: 22/09/2018</div>
+                                            <p class="coomentpromo">Com muita cerveja gelada e os bom tiragostos</p>
+                                            </div>
+                                    </div>
+                                </div>
                         </div>
                         <div data-role="collapsible">
-                            <h3 id='Bar'>Bar<span class="cBar"></span></h3>
-                            <p id='pBar'>I'm the collapsible content for section 2</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='PostodeCombustivel'>Posto de Combustivel<span class="cPostodeCombustivel"></span></h3>
-                            <p id='pPostodeCombustivel'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Mercado'>Mercado<span class="cMercado"></span></h3>
-                            <p id='pMercado'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Salao'>Salão<span class="cSalao"></span></h3>
-                            <p id='pSalao'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Farmacias'>Farmacias<span class="cFarmacias"></span></h3>
-                            <p id='pFarmacias'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Retaurantes'>Retaurantes<span class="cRetaurantes"></span></h3>
-                            <p id='pRetaurantes'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Lanches'>Lanches<span class="cLanches"></span></h3>
-                            <p id='pLanches'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Pizzarias'>Pizzarias<span class="cPizzarias"></span></h3>
-                            <p id='pPizzarias'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Academias'>Academias<span class="cAcademias"></span></h3>
-                            <p id='pAcademias'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='CorrectoresInmovel'>Correctores Inmovel<span class="cCorrectoresInmovel"></span></h3>
-                            <p id='pCorrectoresInmovel'></p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Papelarias'>Papelarias<span class="cPapelarias"></span></h3>
-                            <p id='pPapelarias'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Supermercados'>Supermercados<span class="cSupermercados"></span></h3>
-                            <p id='pSupermercados'>I'm the collapsible content for section 3</p>
-                        </div>
-                        <div data-role="collapsible">
-                            <h3 id='Cafeterias'>Cafeterias<span class="cCafeterias"></span></h3>
-                            <p id='pCafeterias'>I'm the collapsible content for section 3</p>
+                            <h3 id='promoactiva'>Promoções Ativas<span class="cAcougue"></span></h3>
+                            <div id='promoactivacontent'>Não temos Promoções ativas no momento</div>
                         </div>
                     </div>
                 </div>
-
                 <div id="two">
-                    <ul data-role="listview" data-inset="true">
-                        <div id="map"></div>
-                    </ul>
+                    <div id="map"></div>
                 </div>
                 <div id="tree">
-                    <ul data-role="listview" data-inset="true">
-                        <div id="searchproductos">Search productos under construction</div>
-                    </ul>
+                    <div id="searchproductos">
+                        <form id="search">
+                            <input type="text" name="searchfield" id="searchfield" value="" placeholder="Procurar productos">
+                        </form>
+                    </div>
                 </div>
             </div>
+        </div><!-- /content -->
 
+        <div data-role="footer" theme="b" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <h4>GuiaPromo &copy; 2018</h4>
+        </div><!-- /footer -->
 
-            <footer data-role="footer" data-position="fixed">
-                <h4 style="text-align:center">SysSol ADA2 GuiaPromo &copy; 2018</h4>
-            </footer>
-            <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
-                <ul data-role="listview">
-                    <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-                    <li><a href="#panel-responsive-page2">Accordion</a></li>
-                    <li><a href="#panel-responsive-page2">AJAX Navigation</a></li>
-                    <li><a href="#panel-responsive-page2">Autocomplete</a></li>
-                    <li><a href="#panel-responsive-page2">Buttons</a></li>
-                    <li><a href="#panel-responsive-page2">Checkboxes</a></li>
-                    <li><a href="#panel-responsive-page2">Collapsibles</a></li>
-                    <li><a href="#panel-responsive-page2">Controlgroup</a></li>
-                    <li><a href="#panel-responsive-page2">Dialogs</a></li>
-                    <li><a href="#panel-responsive-page2">Fixed toolbars</a></li>
-                    <li><a href="#panel-responsive-page2">Flip switch toggle</a></li>
-                    <li><a href="#panel-responsive-page2">Footer toolbar</a></li>
-                    <li><a href="#panel-responsive-page2">Form elements</a></li>
-                    <li><a href="#panel-responsive-page2">Grids</a></li>
-                    <li><a href="#panel-responsive-page2">Header toolbar</a></li>
-                    <li><a href="#panel-responsive-page2">Icons</a></li>
-                    <li><a href="#panel-responsive-page2">Links</a></li>
-                    <li><a href="#panel-responsive-page2">Listviews</a></li>
-                    <li><a href="#panel-responsive-page2">Loader overlay</a></li>
-                    <li><a href="#panel-responsive-page2">Navbar</a></li>
-                    <li><a href="#panel-responsive-page2">Navbar, persistent</a></li>
-                    <li><a href="#panel-responsive-page2">Pages</a></li>
-                    <li><a href="#panel-responsive-page2">New</a></li>
-                    <li><a href="#panel-responsive-page2">Popup</a></li>
-                    <li><a href="#panel-responsive-page2">Radio buttons</a></li>
-                    <li><a href="#panel-responsive-page2">Select</a></li>
-                    <li><a href="#panel-responsive-page2">Slider, single</a></li>
-                    <li><a href="#panel-responsive-page2">New</a></li>
-                    <li><a href="#panel-responsive-page2">New</a></li>
-                    <li><a href="#panel-responsive-page2">New</a></li>
-                    <li><a href="#panel-responsive-page2">Text inputs & textarea</a></li>
-                    <li><a href="#panel-responsive-page2">Transitions</a></li>
-                </ul>
-            </div><!-- /panel -->
-        </div>
-    <!--</div>-->
-    <script type="text/javascript" src="js/cordova.js"></script>
-    <script type="text/javascript" src="js/platformOverrides.js"></script>
+    </div><!-- /page -->
+    <!-- Start of second page -->
+    <div data-role="page" id="contacto">
+
+        <div data-role="header">
+            <h1>Entre em contato</h1>
+            <a href="#inicio" data-icon="back" data-iconpos="notext">Add</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content" id="ResultMail">
+            <form id="mailform" onsubmit="SendMail(this)">
+                <label for="text-basic">Nome:*</label>
+                <input type="text" name="nome" id="nome" value="" required>
+                <label for="text-basic">Telefone:*</label>
+                <input type="text" name="phone" id="phone" value="" required maxlength="13" OnKeyPress="formatar('##-#########', this)" />
+                <label for="text-basic">Email:*</label>
+                <input type="email" name="email" id="email" value="" required>
+                <label for="textarea">Mensagem:*</label>
+                <textarea cols="40" rows="8" name="mensagem" id="mensagem" required></textarea>
+                <input type="submit" value="Enviar" data-icon="mail" data-theme="a">
+            </form>
+
+        </div><!-- /content -->
+
+        <div data-role="footer" theme="b">
+            <h4>GuiaPromo &copy; 2018</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <!-- Start of second page -->
+    <div data-role="page" id="pempresas">
+
+        <div data-role="header">
+            <h1>Entre em contato</h1>
+            <a href="#inicio" data-icon="back" data-iconpos="notext">Add</a>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content" id="pagEmpresasContent">
+            
+        </div><!-- /content -->
+
+        <div data-role="footer" theme="b">
+            <h4>GuiaPromo &copy; 2018</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="libs/fastclick.min.js"></script>
+    <script src="libs/jquery-1.12.4.min.js"></script>
+    <script src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/appstart.js"></script>
+    <script type="text/javascript" src="js/geolocating.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
 </body>
 </html>

@@ -41,7 +41,7 @@ $(function () {
             type: 'GET',
             dataType: 'JSON',
             beforeSend: function(data){
-                $("#pBar").html('<div style="width:100%;text-align:center"><img src="images/ajax-loader.gif" /></div>');
+                $("#pBar").html('<div style="width:100%;text-align:center"><img src="img/ajax-loader.gif" /></div>');
             },
             success: function (data) {
                 //alert(data);
@@ -62,7 +62,7 @@ $(function () {
             type: 'GET',
             dataType: 'JSON',
             beforeSend: function(data){
-                $("#pCorrectoresInmovel").html('<div style="width:100%;text-align:center"><img src="images/ajax-loader.gif" /></div>');
+                $("#pCorrectoresInmovel").html('<div style="width:100%;text-align:center"><img src="img/ajax-loader.gif" /></div>');
             },
             success: function (data) {
                 //alert(data);

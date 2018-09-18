@@ -34,7 +34,7 @@ function onGetLocationSuccess(position) {
     });
     marker.setAnimation(google.maps.Animation.BOUNCE);
     
-            $.getJSON("https://dev-ipromo.pantheonsite.io/getcompanys.php?find=companys&cat=9999", function(json1) {
+            $.getJSON("https://gpromo.com.br/getcompanys.php?find=companys&cat=9999", function(json1) {
                 $.each(json1, function(key, data) {
                     var latLng = new google.maps.LatLng(data.lat, data.log); 
                     // Creating a marker and putting it on the map
