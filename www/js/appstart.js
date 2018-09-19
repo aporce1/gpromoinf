@@ -42,33 +42,54 @@ function formatar(mascara, documento) {
             dataType: 'JSON',
             success: function (data) {
                 //alert(data);  
-                var puthtmlcomp = "<div data-role='collapsible-set' data-theme='c' data-content-theme='d' class='ui-collapsible-set ui-group-theme-c ui-corner-all'>";
-                for (var c = 0; c < data.length; c++) {
-                    //var info = "<div data-role='collapsible' class='collapse'><h3 id='titlecat'  data-cat='" + data[c].id_categoria+"'>" + data[c].categoria + "</h3><div id='c" + data[c].categoria+"'></div >asdasdasdasd</div>";
-                    var info = "<div data-role='collapsible' class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child ui-last-child ui-collapsible-collapsed'><h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'><a href='javascript:Getlistcom(" + data[c].id_categoria + ");' class='ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-c ui-icon-plus'>" + data[c].categoria + "<span class='ui-collapsible-heading-status'> click to expand contents</span></a>";
 
-                    info += "</h3><div class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed' aria-hidden='true'><p>I'm the collapsible content for section 1</p></div></div>";
+
+
+                var puthtmlcomp = "<select name='selectcat' id='selectcat' onchange='OKalert();'><option value='0'>Procurar uma categoria</option>";
+//                var puthtmlcomp = "<div data-role='collapsible-set' data-theme='c' data-content-theme='d' class='ui-collapsible-set ui-group-theme-c ui-corner-all'>";
+                for (var c = 0; c < data.length; c++) {
+                    var info = "<option value='"+data[c].id_categoria+"'>" + data[c].categoria+"</option>";
+                    //var info = "<div data-role='collapsible' class='collapse'><h3 id='titlecat'  data-cat='" + data[c].id_categoria+"'>" + data[c].categoria + "</h3><div id='c" + data[c].categoria+"'></div >asdasdasdasd</div>";
+                    //var info = "<div data-role='collapsible' class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child ui-last-child ui-collapsible-collapsed'><h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'><a href='javascript:Getlistcom(" + data[c].id_categoria + ");' class='ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-c ui-icon-plus'>" + data[c].categoria + "<span class='ui-collapsible-heading-status'> click to expand contents</span></a>";
+
+                    //info += "</h3><div class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed' aria-hidden='true'><p>I'm the collapsible content for section 1</p></div></div>";
 
                     puthtmlcomp += info;
                 }
-                puthtmlcomp += "</div>";                
-                $("#pagEmpresasContent").html(puthtmlcomp);
-//                $("#pagEmpresasContent").trigger("updatelayout");
-//                $("#pagEmpresasContent").trigger("create");
+                //puthtmlcomp += "</div>";  
+                puthtmlcomp += '</select>';
+                $("#buscadorcar").html(puthtmlcomp);
+                //$("#buscadorcar").trigger("updatelayout");
+                $("#buscadorcar").trigger("create");
             }
         });
     }
 
-    function Getlistcom() {
 
-        alert('listcompanys');
-    }
-
-
-    $("#titlecat>a").click(function () { 
-        alert('ok');
+function OKalert(){
+        $.ajax({
+            url: 'https://gpromo.com.br/getcompanys.php?find=companys&cat='+$("#selectcat option:selected").val(),
+            type: 'GET',
+            dataType: 'JSON',
+            beforeSend: function (data) {
+                $("#buquedacatresultado").html('<div style="width:100%;text-align:center"><img src="img/ajax-loader.gif" /></div>');
+            },
+            success: function (data) {
+                //alert(data);
+                var canciones = "";
+                for (var c = 0; c < data.length; c++) {
+                    var infocancion = "<div class='sEmpresa'>" + data[c].nomeemp + "</div><div class='sInfo'><div class='ui-block-a'>"+data[c].endereco+", "+data[c].numero+", "+data[c].bairro+", "+data[c].cidade+", "+data[c].estado+"</div><div class='ui-block-a'><a class='ui-btn ui-shadow ui-corner-all ui-icon-phone' href='tel:+55" + data[c].telefone + "'>" + data[c].telefone + "</a></div><div class='ui-block-b'><a class='ui-btn ui-shadow ui-corner-all ui-icon-phone' href='mailto:"+data[c].email+"'>"+data[c].email+"</a></div></div>";
+                    canciones += infocancion;
+                    console.log(infocancion);
+                }
+                canciones += "</ul>";
+                $("#buquedacatresultado").html(canciones);
+                $("#buquedacatresultado").trigger("create");
+            }
     });
 
+
+}
 //ENVIAR EL CORREO
 
 function SendMail(dataForm) {
@@ -98,29 +119,3 @@ function SendMail(dataForm) {
 
     event.preventDefault(); // avoid to execute the actual submit of the form.
 };
-
-
-
-
-
-    $("#CorrectoresInmovel>a").click(function () {
-        $.ajax({
-            url: 'https://gpromo.com.br/getcompanys.php?find=companys&cat=18',
-            type: 'GET',
-            dataType: 'JSON',
-            beforeSend: function (data) {
-                $("#pCorrectoresInmovel").html('<div style="width:100%;text-align:center"><img src="img/ajax-loader.gif" /></div>');
-            },
-            success: function (data) {
-                //alert(data);
-                var canciones = "";
-                for (var c = 0; c < data.length; c++) {
-                    var infocancion = "<div class='sEmpresa'>" + data[c].nomeemp + "</div><div class='sInfo'><a href='tel:+55" + data[c].telefone + "'>" + data[c].telefone + "</a></div>";
-                    canciones += infocancion;
-                    console.log(infocancion);
-                }
-                canciones += "</ul>";
-                $("#pCorrectoresInmovel").html(canciones);
-            }
-        })
-    });

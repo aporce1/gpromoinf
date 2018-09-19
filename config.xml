@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="br.com.gpromo.gpromoapp" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="br.com.gpromo.gpromoapp" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>GuiaPromo</name>
     <description>
         As melhores promoções na palma da sua mao
@@ -20,18 +20,18 @@
         <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
         <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
         <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
-        <splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
-        <splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
-        <splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
-        <splash density="land-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
-        <splash density="land-xxhdpi" src="www/res/screen/android/drawable-land-xxhdpi-screen.png" />
-        <splash density="land-xxxhdpi" src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" />
-        <splash density="port-ldpi" src="www/res/screen/android/drawable-port-ldpi-screen.png" />
-        <splash density="port-mdpi" src="www/res/screen/android/drawable-port-mdpi-screen.png" />
-        <splash density="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png" />
-        <splash density="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
-        <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
-        <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
+        <splash qualifier="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
+        <splash qualifier="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
+        <splash qualifier="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
+        <splash qualifier="land-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
+        <splash qualifier="land-xxhdpi" src="www/res/screen/android/drawable-land-xxhdpi-screen.png" />
+        <splash qualifier="land-xxxhdpi" src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" />
+        <splash qualifier="port-ldpi" src="www/res/screen/android/drawable-port-ldpi-screen.png" />
+        <splash qualifier="port-mdpi" src="www/res/screen/android/drawable-port-mdpi-screen.png" />
+        <splash qualifier="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png" />
+        <splash qualifier="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
+        <splash qualifier="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
+        <splash qualifier="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
         <hook src="remove_permissions.js" type="after_prepare" />
     </platform>
     <platform name="ios">
@@ -88,4 +88,7 @@
     <engine name="android" spec="~6.0.0" />
     <engine name="ios" spec="4.2.0" />
     <engine name="windows" spec="4.4.2" />
+    <platform name="android">
+        <preference name="SplashScreen" value="splash" />
+    </platform>
 </widget>
