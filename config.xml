@@ -91,5 +91,5 @@
     <platform name="android">
         <preference name="SplashScreen" value="splash" />
     </platform>
-    <icon src="icon.png" />
+    <icon src="www/icon.png" />
 </widget>
