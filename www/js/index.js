@@ -20,7 +20,7 @@ var app = {
         //chequeo si tienen internet
         if (checkConnection() == 'NoInternet') {
             navigator.notification.alert(
-                'Sentimos mas o app so funciona com Acceso a Internet por enquanto',  // message
+                'Sentimos mas o app só funciona com acesso a internet por enquanto',  // message
                 alertDismissed,         // callback
                 'Sem Internet',            // title
                 'Tchau'                  // buttonName

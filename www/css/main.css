@@ -1,10 +1,6 @@
 ﻿.ui-content.jqm-content.jqm-fullwidth {
     padding: 0px;
 }
-input[type="submit"] {
-    background-color: rgba(5,132,20,0.9) !important;
-    opacity: 0.7;
-}
 .phcEmpresa {
     background: rgba(240,47,23,1);
     background: -moz-linear-gradient(top, rgba(240,47,23,1) 0%, rgba(255,255,255,1) 0%, rgba(241,111,92,0.87) 100%);
@@ -20,14 +16,16 @@ input[type="submit"] {
     width: 100%;
     margin-bottom: 5px;
 }
-.ui-header.ui-bar-inherit, .jqm-footer.ui-footer.ui-bar-inherit.ui-footer-fixed.slideup {
-    background-color: rgba(183,11,11,0.5);
+a.ui-link.ui-btn-right.ui-btn.ui-icon-mail.ui-btn-icon-notext.ui-shadow.ui-corner-all, a.ui-link.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all {
+    background-color: #1727c1;
 }
-a.ui-link.ui-btn-right.ui-btn.ui-icon-mail.ui-btn-icon-notext.ui-shadow.ui-corner-all {
-    background-color: rgba(4,96,38,0.5);
+li.ui-li-static.ui-body-inherit.ui-first-child {
+    background-color: #b70b0b;
+    color: #fff;
 }
-a.ui-link.ui-btn-left.ui-btn.ui-icon-bars.ui-btn-icon-notext.ui-shadow.ui-corner-all {
-    background-color: rgba(0,0,0,0.5);
+h3#promohoje {
+    color: #b70b0b;
+    text-align: center;
 }
 .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
     border: none !important;
@@ -48,8 +46,7 @@ div#map {
             padding-left: 6px;
         }
 #promohojecontent .phcEmpresaPromo {
-    padding-left: 2px;
-    border-left: 3px solid #ff0000;
+    border-left: 2px solid #b70b0b;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
