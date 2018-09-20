@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com https://gpromo.com.br https://maps.googleapis.com https://maps.gstatic.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://gpromo.com.br https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com http://code.jquery.com" "   />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com https://gpromo.com.br https://maps.googleapis.com https://maps.gstatic.com https://fonts.gstatic.com https://lh3.ggpht.com https://cbks0.googleapis.com https://geo0.ggpht.com https://geo1.ggpht.com https://geo2.ggpht.com https://geo3.ggpht.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://gpromo.com.br https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com http://code.jquery.com"   />
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>GuiaPromo</title>
@@ -37,12 +37,13 @@
                     <ul>
                         <li><a href="#one" data-ajax="false" id="empresas">Promoções</a></li>
                         <li><a href="#two" data-ajax="false" id="mapa">Mapa</a></li>
-                        <li><a href="#tree" data-ajax="false">Pesquisar</a></li>
+                        <!--<li><a href="#tree" data-ajax="false">Pesquisar</a></li>-->
                     </ul>
                 </div>
                 <div id="one">
-                    <h3 id='promohoje'>Novas Promoções</h3>
-                    <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+                    <p class="promo">GuiaPromo está com desconto para sua empresa! Na hora de <a href="https://gpromo.com.br/planos/" target="_blank" data-theme="a">CADASTRAR</a> seu negócio usando o cupom <span class="blink"> LANCAMENTO </span>você sõ paga R$ 1,00 no seu primer mês<br /><span class="small">válida até 20/10/2018</span></p>
+                    <h3 id='promohoje'>Promoções Ativas</h3>
+                    <div data-role="collapsible-set" data-theme="c" data-content-theme="d" id="promos">
                         <div data-role="collapsible" class="collapse">
                             <h3 id='promohoje'>Bar Los Compas</h3>
                             <div id='promohojecontent'>
@@ -80,19 +81,17 @@
                             <div id='promoactivacontent'>Não temos Promoções ativas no momento</div>
                         </div>
                     </div>
-                    <h3 id='promohoje'>Promoções Ativas</h3>
-
                 </div>
                 <div id="two">
                     <div id="map"></div>
                 </div>
-                <div id="tree">
-                    <div id="searchproductos">
-                        <form id="search">
-                            <input type="text" name="searchfield" id="searchfield" value="" placeholder="Procurar productos">
-                        </form>
-                    </div>
-                </div>
+                <!--<div id="tree">
+        <div id="searchproductos">
+            <form id="search">
+                <input type="text" name="searchfield" id="searchfield" value="" placeholder="Procurar productos">
+            </form>
+        </div>
+    </div>-->
             </div>
         </div><!-- /content -->
 
@@ -100,7 +99,7 @@
             <div data-role="navbar">
                 <ul>
                     <li><a href="#pempresas" >Categorias</a></li>
-                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b">Cadastrar Empresa</a></li>
+                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b">CADASTRAR EMPRESA</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
@@ -143,7 +142,7 @@
     <div data-role="page" id="pempresas">
 
         <div data-role="header">
-            <h1>Categorias de negocios</h1>
+            <h1>CATEGORIAS</h1>
             <a href="#inicio" data-icon="home" data-iconpos="notext">Add</a>
         </div><!-- /header -->
 
@@ -152,8 +151,13 @@
         <div class="ui-grid-a" id="buquedacatresultado"></div>
         </div><!-- /content -->
 
-        <div data-role="footer" theme="b" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
-            <h4>GuiaPromo &copy; 2018</h4>
+        <div data-role="footer" data-theme="a" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#pempresas">Categorias</a></li>
+                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b">Cadastrar Empresa</a></li>
+                </ul>
+            </div><!-- /navbar -->
         </div><!-- /footer -->
     </div><!-- /page -->
 

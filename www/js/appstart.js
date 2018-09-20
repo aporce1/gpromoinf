@@ -34,6 +34,27 @@ function formatar(mascara, documento) {
         });
     });
 
+    function GetPromo(){
+    $.ajax({
+            url: 'https://gpromo.com.br/getpromo.php',
+            type: 'GET',
+            dataType: 'JSON',
+            success: function (data) {
+                alert(data);  
+                var puthtmlcomp='';
+                for (var c = 0; c < data.length; c++) {
+                    var info = "<div data-role='collapsible' class='collapse'><h3 id='promohoje'>"+data[c].nomeemp+"</h3><div id='promohojecontent'><div class='phcEmpresaPromo'><table data-role='table' data-mode='reflow' class='ui-responsive'><thead><tr><th data-priority='1'></th><th data-priority='1'></th></tr></thead><tr><td>";
+                    info += "<a href='#pa"+c+"' data-rel='popup' data-position-to='window'><img src='"+data[c].image+"' /></a></td><td><p class='titlepromo'>"+data[c].producto+"</p><div class='ui-block-a data'>Data: "+data[c].datainicio+" "+data[c].horario_inciio+" horas</div><div class='ui-block-b divisordata'>|</div><div class='ui-block-c data'>Até: "+data[c].datafin+"</div>";
+                    info += "<p class='coomentpromo'>"+data[c].notas+"</p></td></tr></table><div id='pa"+c+"' data-role='popup' data-overlay-theme='a'><img src='"+data[c].image+"' style='max-width100%'></div></div></div></div>";
+                    puthtmlcomp += info;
+                }
+                $("#promos").html(puthtmlcomp);
+                //$("#buscadorcar").trigger("updatelayout");
+                $("#promos").trigger("create");
+            }
+        });
+}
+
     function GetCategories() {
         $.ajax({
             //SELECT DISTINCT wp_categorias.categoria FROM wp_categorias, wp_comercios WHERE wp_comercios.`id_cat` = wp_categorias.`id_categoria`

@@ -28,6 +28,7 @@ var app = {
         }
 
         //Listo las categorias activas en el panel
+        GetPromo();
         GetCategories();
 
     }
