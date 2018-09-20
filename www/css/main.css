@@ -118,3 +118,15 @@ div#buquedacatresultado {
 .promo a.ui-link {
     color: #FFF;
 }
+.precoanterior {
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+span.bigred {
+    font-size: 20px;
+    color: #b70b0b;
+}
+span.precopromo {
+    font-size: 13px;
+}

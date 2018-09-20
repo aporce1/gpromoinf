@@ -44,9 +44,43 @@ function formatar(mascara, documento) {
             success: function (data) {
                 var puthtmlcomp='';
                 for (var c = 0; c < data.length; c++) {
-                    var info = "<div data-role='collapsible' class='collapse'><h3 id='promohoje'>"+data[c].nomeemp+"</h3><div id='promohojecontent'><div class='phcEmpresaPromo'><table data-role='table' data-mode='reflow' class='ui-responsive'><thead><tr><th data-priority='1'></th><th data-priority='1'></th></tr></thead><tr><td>";
-                    info += "<a href='#pa"+c+"' data-rel='popup' data-position-to='window'><img src='"+data[c].image+"' /></a></td><td><p class='titlepromo'>"+data[c].producto+"</p><div class='ui-block-a data'>Data: "+data[c].datainicio+" "+data[c].horario_inciio+" horas</div><div class='ui-block-b divisordata'>|</div><div class='ui-block-c data'>Até: "+data[c].datafin+"</div>";
-                    info += "<p class='coomentpromo'>"+data[c].notas+"</p></td></tr></table><div id='pa"+c+"' data-role='popup' data-overlay-theme='a'><img src='"+data[c].image+"' style='max-width100%'></div></div></div></div>";
+                    var info = "<div data-role='collapsible' class='collapse'><h3 id='promohoje'>" + data[c].nomeemp + "</h3><div id='promohojecontent'><div class='phcEmpresaPromo'><table data-role='table' data-mode='reflow' class='ui-responsive'><thead><tr><th data-priority='1'></th><th data-priority='1'></th></tr></thead><tr><td>";
+                    info += "<a href='#pa" + c + "' data-rel='popup' data-position-to='window'>";
+
+                    if (data[c].image != null) {
+                        info += "<img src='" + data[c].image + "' /></a ></td >";
+                    } else {
+                        info += "<img src='img/promo.png' /></a ></td >";
+                    }
+                    //preco normal
+                    info += "<td><p class='titlepromo'>" + data[c].producto;
+                    if (data[c].preco_n != null) {
+                        info += "<span class='precoanterior'> R$ " + data[c].preco_n + "</span>";
+                    } else {
+
+                    }
+                    //preco promo
+                    if (data[c].preco_pro != null) {
+                        info += "<span class='precopromo'> agora por <span class='bigred'>R$" + data[c].preco_pro + "</span></span>";
+                    } else {
+
+                    }
+
+                    info += "</p>";
+                    info += "<div class='ui-block-a data'>Data: " + data[c].datainicio;
+                    //horario
+                    if (data[c].horario_inciio != null) {
+                        info += " -- " + data[c].horario_inciio + " horas</div><div class='ui-block-b divisordata'>|</div><div class='ui-block-c data'>Até: " + data[c].datafin + "</div>";
+                    } else {
+                        info += "</div > <div class='ui-block-b divisordata'>|</div> <div class='ui-block-c data'>Até: " + data[c].datafin + "</div>";
+                    }
+                    //notas
+                    if (data[c].notas != null) {
+                        info += "<p class='coomentpromo'>" + data[c].notas+"</p></td></tr></table><div id='pa"+ c + "' data-role='popup' data-overlay-theme='a'><img src='" + data[c].image + "' style='max-width100%'></div></div></div></div>";
+                    } else {
+                        info += "<div id='pa"+ c + "' data-role='popup' data-overlay-theme='a'><img src='" + data[c].image + "' style='max-width100%'></div></div></div></div>";
+                    }
+                    
                     puthtmlcomp += info;
                 }
                 $("#promos").html(puthtmlcomp);
