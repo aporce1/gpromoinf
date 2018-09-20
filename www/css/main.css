@@ -107,6 +107,7 @@ div#buquedacatresultado {
     color: #fff;
     background-color: #17aa60;
     padding: 5px 10px;
+    text-shadow: none;
 }
 .blink {
     background-color: brown;
