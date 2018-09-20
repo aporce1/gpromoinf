@@ -85,9 +85,7 @@
     <plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
     <plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
     <plugin name="cordova-plugin-geolocation" source="npm" spec="~2.4.3" />
-      <plugin name="phonegap-plugin-push" spec="^2.2.3" />
-      <plugin name="cordova-support-google-services" spec="~1.1.0" />
-      <plugin name="phonegap-plugin-multidex" spec="~1.0.0" />    
+  
     <engine name="android" spec="~6.0.0" />-->
     <engine name="ios" spec="4.2.0" />
     <engine name="windows" spec="4.4.2" />
