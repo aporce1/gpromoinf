@@ -21,78 +21,95 @@
 
         <div data-role="header" style="text-align:center" data-theme="c">
             <img src="img/logo2.png" style="max-width: 169px;padding-top: 3px;" />
-            <!--<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>-->
-            <a href="#inicio" data-icon="home" data-iconpos="notext">Add</a>
-            <a href="#contacto" data-icon="mail" data-iconpos="notext">Add</a>
+            <a href="#inicio" data-icon="home" data-iconpos="notext">Voltar inicio</a>
+            <a href="#contacto" data-icon="mail" data-iconpos="notext">Enviar Email</a>
         </div><!-- /header -->
 
         <div role="main" class="ui-content jqm-content jqm-fullwidth">
-            <div data-role="tabs" id="tabs">
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#one" data-ajax="false" id="empresas">Promoções</a></li>
-                        <li><a href="#two" data-ajax="false" id="mapa">Mapa</a></li>
-                        <!--<li><a href="#tree" data-ajax="false">Pesquisar</a></li>-->
-                    </ul>
-                </div>
-                <div id="one">
-                    <p class="promo">GuiaPromo está com desconto para sua empresa! Na hora de <a href="https://gpromo.com.br/planos/" target="_blank" data-theme="a">CADASTRAR</a> seu negócio usando o cupom <span class="blink"> LANCAMENTO </span>você sõ paga R$ 1,00 no seu primer mês<br /><span class="small">válida até 20/10/2018</span></p>
-                    <h3 id='promohoje'>Promoções Ativas</h3>
-                    <div data-role="collapsible-set" data-theme="c" data-content-theme="d" id="promos">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio">Promoções</a></li>
+                    <li><a href="#pagemap" id="mapa">Mapa</a></li>
+                    <li><a href="#pempresas">Empresas</a></li>
+                </ul>
+            </div>
+            <div id="one">
+                <p class="promo">GuiaPromo está com desconto para sua empresa! Na hora de <a href="https://gpromo.com.br/planos/" target="_blank" data-theme="a">CADASTRAR</a> seu negócio usando o cupom <span class="blink"> LANCAMENTO </span>você só paga R$ 1,00 no seu primeiro mês<br /><span class="small">válida até 20/10/2018</span></p>
+            </div>
+            <h3 id='promohoje'>Promoções Ativas</h3>
+            <div data-role="collapsible-set" data-theme="c" data-content-theme="d" id="promos">
 
-                    </div>
-                </div>
-                <div id="two">
-                    <div id="map"></div>
-                </div>
-                <!--<div id="tree">
-                    <div id="searchproductos">
-                        <form id="search">
-                            <input type="text" name="searchfield" id="searchfield" value="" placeholder="Procurar productos">
-                        </form>
-                    </div>
-                </div>-->
             </div>
         </div><!-- /content -->
 
         <div data-role="footer" data-theme="a" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#pempresas">Categorias</a></li>
-                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b">CADASTRAR EMPRESA</a></li>
+                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b" class="ui-btn-active">Cadastrar Empresa</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
 
     </div><!-- /page -->
+   
+
+    <!-- End of pages mapa -->
+
+    <div data-role="page" id="pagemap">
+        <div data-role="header" style="text-align:center" data-theme="c">
+            <img src="img/logo2.png" style="max-width: 169px;padding-top: 3px;" />
+            <a href="#inicio" data-icon="home" data-iconpos="notext">Voltar inicio</a>
+            <a href="#contacto" data-icon="mail" data-iconpos="notext">Enviar Email</a>
+        </div><!-- /header -->
+        <div role="main" class="ui-content jqm-content jqm-fullwidth">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#inicio">Promoções</a></li>
+                    <li><a href="#pagemap" id="mapa" class="ui-btn-active">Mapa</a></li>
+                    <li><a href="#pempresas">Empresas</a></li>
+                </ul>
+            </div>
+            <div id="map"></div>
+        </div>
+        <div data-role="footer" data-theme="a" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b" class="ui-btn-active">Cadastrar Empresa</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+
+    <!-- End of pages mapa -->
     <!-- Start of second page -->
     <div data-role="page" id="contacto">
 
         <div data-role="header">
             <h1>Entre em contato</h1>
-            <a href="#inicio" data-icon="home" data-iconpos="notext">Add</a>
+            <a href="#inicio" data-icon="home" data-iconpos="notext">Voltar inicio</a>
+            <a href="#" data-icon="mail" data-iconpos="notext">Enviar Email</a>
         </div><!-- /header -->
+        <div role="main" class="ui-content">
 
-        <div role="main" class="ui-content" id="ResultMail">
-            <form id="mailform" onsubmit="SendMail(this)">
-                <label for="text-basic">Nome:*</label>
-                <input type="text" name="nome" id="nome" value="" required>
-                <label for="text-basic">Telefone:*</label>
-                <input type="text" name="phone" id="phone" value="" required maxlength="13" OnKeyPress="formatar('##-#########', this)" />
-                <label for="text-basic">Email:*</label>
-                <input type="email" name="email" id="email" value="" required>
-                <label for="textarea">Mensagem:*</label>
-                <textarea cols="40" rows="8" name="mensagem" id="mensagem" required></textarea>
-                <input type="submit" value="Enviar" data-icon="mail" data-theme="a">
-            </form>
-
+            <div id="ResultMail">
+                <form id="mailform" onsubmit="SendMail(this)">
+                    <label for="text-basic">Nome:*</label>
+                    <input type="text" name="nome" id="nome" value="" required>
+                    <label for="text-basic">Telefone:*</label>
+                    <input type="text" name="phone" id="phone" value="" required maxlength="13" OnKeyPress="formatar('##-#########', this)" />
+                    <label for="text-basic">Email:*</label>
+                    <input type="email" name="email" id="email" value="" required>
+                    <label for="textarea">Mensagem:*</label>
+                    <textarea cols="40" rows="8" name="mensagem" id="mensagem" required></textarea>
+                    <input type="submit" value="Enviar" data-icon="mail" data-theme="a">
+                </form>
+            </div>
         </div><!-- /content -->
 
         <div data-role="footer" data-theme="a" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#pempresas">Categorias</a></li>
-                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b">Cadastrar Empresa</a></li>
+                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b" class="ui-btn-active">Cadastrar Empresa</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
@@ -101,11 +118,21 @@
     <div data-role="page" id="pempresas">
 
         <div data-role="header">
-            <h1>CATEGORIAS</h1>
-            <a href="#inicio" data-icon="home" data-iconpos="notext">Add</a>
+            <div data-role="header" style="text-align:center" data-theme="c">
+                <img src="img/logo2.png" style="max-width: 169px;padding-top: 3px;" />
+                <a href="#inicio" data-icon="home" data-iconpos="notext">Voltar inicio</a>
+                <a href="#contacto" data-icon="mail" data-iconpos="notext">Enviar Email</a>
+            </div><!-- /header -->
         </div><!-- /header -->
 
         <div role="main" class="ui-content" id="pagEmpresasContent">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#pagepromo">Promoções</a></li>
+                    <li><a href="#pagemap" id="mapa" >Mapa</a></li>
+                    <li><a href="#pempresas" class="ui-btn-active">Empresas</a></li>
+                </ul>
+            </div>
             <div class="ui-block-a" id="buscadorcar"></div>
             <div class="ui-grid-a" id="buquedacatresultado"></div>
         </div><!-- /content -->
@@ -113,8 +140,7 @@
         <div data-role="footer" data-theme="a" data-position="fixed" data-tap-toggle="false" class="jqm-footer">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#pempresas">Categorias</a></li>
-                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b">Cadastrar Empresa</a></li>
+                    <li><a href="https://gpromo.com.br/planos/" target="_blank" data-theme="b" class="ui-btn-active">Cadastrar Empresa</a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->

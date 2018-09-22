@@ -18,7 +18,6 @@ function onGetLocationSuccess(position) {
         zoom: 13,
         mapTypeId:'roadmap'
     };
-    console.log('ok');
 
     //var map = new google.maps.Map($('#map'), mapOptions);
     var map = new google.maps.Map(document.getElementById('map'), {

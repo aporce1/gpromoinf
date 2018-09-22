@@ -130,3 +130,6 @@ span.bigred {
 span.precopromo {
     font-size: 13px;
 }
+a.ui-link.ui-btn {
+    text-transform: uppercase;
+}
