@@ -53,7 +53,7 @@ function formatar(mascara, documento) {
                         }
                     }
                     if (empresa != data[c].nomeemp) {
-                        alert('empresa nueva--'+c);
+                        
                         info += "<div data-role='collapsible' class='collapse'><h3 id='promohoje'>" + data[c].nomeemp + "</h3><div id='promohojecontent'><div class='phcEmpresaPromo'><table data-role='table' data-mode='reflow' class='ui-responsive'><thead><tr><th data-priority='1'></th><th data-priority='1'></th></tr></thead><tr><td>";
                         info += "<a href='#pa" + c + "' data-rel='popup' data-position-to='window'>";
                         if (data[c].image != '') {
@@ -91,7 +91,7 @@ function formatar(mascara, documento) {
                         }
 
                     } else {
-                        alert('segundo producto--' + c);
+                        
                         var info = "<table data-role='table' data-mode='reflow' class='ui-responsive'><thead><tr><th data-priority='1'></th><th data-priority='1'></th></tr></thead><tr><td>";
                         info += "<a href='#pa" + c + "' data-rel='popup' data-position-to='window'>";
                         if (data[c].image != '') {
